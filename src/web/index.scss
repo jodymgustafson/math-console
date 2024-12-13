@@ -1,0 +1,79 @@
+body {
+  font: 16px Arial, Tahoma, sans-serif;
+}
+
+button {
+  cursor: pointer;
+}
+
+.hidden {
+  display: none;
+}
+
+#app {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+
+  h1 {
+    font-size: 1.1em;
+    margin: 0;
+    padding: .2em;
+    background-color: #444;
+    color: silver;
+    text-align: center;
+  }
+}
+
+.input {
+  display: grid;
+  background-color: steelblue;
+  padding: .5em;
+  border-bottom: 2px solid darkslategray;
+
+  button {
+    font-size: 1.1em;
+    margin-left: .25em;
+    border: 1px solid darkslategray;
+    opacity: .8;
+  }
+}
+
+#expression {
+  display: block;
+  font-size: 1.5em;
+  border: none;
+  border-radius: 1em;
+  padding: 0 .5em;
+  margin-bottom: .25em;
+}
+
+#evaluate {
+  border-radius: 1em;
+  background-color: green;
+  color: whitesmoke;
+}
+
+#output {
+  flex-grow: 1;
+  background-color: ghostwhite;
+  overflow: auto;
+  padding: .5em;
+
+  .expression {
+    color: gray;
+    border-bottom: 1px solid silver;
+  }
+  
+  .error {
+    color: red;
+  }
+
+  .info {
+    color: silver;
+  }
+}
