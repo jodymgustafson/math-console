@@ -1,6 +1,5 @@
+import { CartesianGraph, GraphCanvas } from "math-graph-canvas/dist";
 import { Runtime } from "mezcal/dist/src/runtime";
-import { GraphCanvas, CartesianGraph, GraphRenderer } from "graph2d-component/build/index";
-import { getDefaultViewport } from "graph2d-component/build/src/graph-viewport";
 // import data from "../../data/version.json";
 // import pkg from "../../package.json";
 
@@ -89,25 +88,18 @@ function clearExpression(): void {
     input.focus();
 }
 
-function copyExpression(ev: MouseEvent) {
+function copyExpression(ev: MouseEvent): void {
     const el = ev.target as HTMLElement;
     if (el.classList.contains("result") || el.classList.contains("expression")) {
         input.value = el.innerText;
     }
 }
 
-function addGraph(expr: string) {
-    // const p = document.createElement("graph-canvas") as GraphCanvas;
-    // p.width = 400;
-    // p.height = 400;
-    // p.viewport = getDefaultViewport();
-    // p.classList.add("graph");
-    // output.prepend(p);
-
-    const c = document.createElement("canvas");
-    c.width = 200;
-    c.height = 200;
-    output.prepend(c);
+function addGraph(expr: string): void {
+    const gc = document.createElement("graph-canvas") as GraphCanvas;
+    gc.setAttribute("width", "200");
+    gc.setAttribute("height", "200");
+    output.prepend(gc);
 
     const start = Date.now();
     runtime.evaluate(`function _fn() return ${expr}`);
@@ -117,9 +109,9 @@ function addGraph(expr: string) {
         const value = runtime.evaluate(`_fn()`) as number;
         return value;
     });
+    
+    gc.addGraph(g);
 
-    const r = new GraphRenderer(c, getDefaultViewport());
-    r.draw(g);
-    console.log("time:", Date.now() - start);
+    console.log("time", Date.now() - start);
 }
 

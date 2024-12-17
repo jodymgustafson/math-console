@@ -29,7 +29,7 @@
     "webpack-cli": "^5.1.4"
   },
   "dependencies": {
-    "graph2d-component": "file:../graph2d-component/graph2d-component-1.0.0.tgz",
+    "math-graph-canvas": "https://github.com/jodymgustafson/math-graph-canvas/releases/download/v1.0.1/math-graph-canvas-1.0.1.tgz",
     "mezcal": "https://github.com/jodymgustafson/mezcal/releases/download/v1.1.1/mezcal-1.1.1.tgz"
   }
 }
