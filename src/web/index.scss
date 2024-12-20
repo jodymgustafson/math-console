@@ -29,11 +29,27 @@ button {
   }
 }
 
-.input {
+.top {
   display: grid;
   background-color: steelblue;
   padding: .5em;
   border-bottom: 2px solid darkslategray;
+
+  .input {
+    display: flex;
+    align-items: center;
+    border-radius: 1em;
+    background-color: white;
+    padding: .3em;
+    margin-bottom: .25em;
+
+    select {
+      border: none
+    }
+    input {
+      flex-grow: 1;
+    }
+  }
 
   button {
     font-size: 1.1em;
@@ -44,12 +60,9 @@ button {
 }
 
 #expression {
-  display: block;
   font-size: 1.5em;
   border: none;
-  border-radius: 1em;
   padding: 0 .5em;
-  margin-bottom: .25em;
 }
 
 #evaluate {
@@ -76,4 +89,9 @@ button {
   .info {
     color: silver;
   }
+}
+
+graph-canvas {
+  display: inline-flex;
+  border: 1px solid black
 }

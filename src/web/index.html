@@ -27,11 +27,17 @@
   <div id="loading">Loading...</div>
   <div id="error"></div>
   <div id="app" class="hidden">
-    <h1>
+    <h1 hidden>
       Math Console
     </h1>
-    <div class="input">
-      <input type="text" id="expression" autofocus placeholder="Enter expression" />
+    <div class="top">
+      <div class="input">
+        <select id="mode">
+          <option value="eval">eval</option>
+          <option value="cartesian">y(x)=</option>
+          <option value="polar">r(t)=</option>
+          <input type="text" id="expression" autofocus placeholder="Enter expression" />
+      </div>
       <div class="buttons">
         <button title="Evaluate expression" id="evaluate">=</button>
         <button title="Clear expression" id="clear">CLR</button>
@@ -40,7 +46,7 @@
     <div id="output"></div>
   </div>
 
- <div id="tracking" hidden>
+  <div id="tracking" hidden>
     <!-- <script src="https://defendium.com/protect.min.js" async></script> -->
     <!-- <script async defer src="https://scripts.simpleanalyticscdn.com/latest.js"></script>
     <noscript><img src="https://queue.simpleanalyticscdn.com/noscript.gif" alt="" referrerpolicy="no-referrer-when-downgrade" /></noscript> -->
@@ -48,4 +54,5 @@
 
   <script src="../../build/index.js"></script>
 </body>
+
 </html>

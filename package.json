@@ -5,13 +5,12 @@
   "main": "index.js",
   "scripts": {
     "test": "jasmine",
-    "start": "node dist/index.js",
     "build": "tsc",
     "clean": "tsc --build --clean",
     "get-version": "node getVersion.js",
     "css-version": "node cssVersion.js",
     "sass": "npx sass ./src/web/index.scss ./build/src/web/index.css --no-source-map --style=compressed",
-    "dev": "npm run get-version && webpack --mode=development",
+    "start": "npm run get-version && webpack --mode=development",
     "release": "tsc && npm test && npm run get-version && npm run sass && webpack --mode=production"
   },
   "author": "JM Gustafson",
@@ -29,7 +28,7 @@
     "webpack-cli": "^5.1.4"
   },
   "dependencies": {
-    "math-graph-canvas": "https://github.com/jodymgustafson/math-graph-canvas/releases/download/v1.0.1/math-graph-canvas-1.0.1.tgz",
+    "math-graph-canvas": "https://github.com/jodymgustafson/math-graph-canvas/releases/download/v1.0.2/math-graph-canvas-1.0.2.tgz",
     "mezcal": "https://github.com/jodymgustafson/mezcal/releases/download/v1.1.1/mezcal-1.1.1.tgz"
   }
 }
