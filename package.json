@@ -29,6 +29,7 @@
   },
   "dependencies": {
     "math-graph-canvas": "https://github.com/jodymgustafson/math-graph-canvas/releases/download/v1.0.2/math-graph-canvas-1.0.2.tgz",
+    "mathjs": "^14.0.1",
     "mezcal": "https://github.com/jodymgustafson/mezcal/releases/download/v1.1.1/mezcal-1.1.1.tgz"
   }
 }
